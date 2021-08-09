@@ -1,0 +1,11 @@
+@import "src/assets/styles/all";
+
+.footer {
+  height: $footer-height;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: $footer-padding;
+  background: $primary-color;
+}
