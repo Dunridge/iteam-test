@@ -1,0 +1,9 @@
+@import "src/assets/styles/all";
+
+.header {
+  height: $header-height;
+
+  &__title {
+    font-size: 100px;
+  }
+}
