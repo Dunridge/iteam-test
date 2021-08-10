@@ -1,14 +1,7 @@
 <div class="body">
-<!--  TODO: define the form...-->
   <form [formGroup]="fg">
     <div class="body__fields">
-      <input formControlName="firstName" type="text">
-      <input formControlName="lastName" type="text">
-      <input formControlName="dateOfBirth" type="text">
-      <input formControlName="technology" type="text">
-      <input formControlName="version" type="text">
-      <input formControlName="email" type="text">
-      <input formControlName="hobby" type="text">
+      <app-input-field *ngFor="let control of controls" [label]="control.label" [control]="convertToFormControl(fg.get(control.control))"></app-input-field>
     </div>
     <button (click)="submit()">Submit</button>
   </form>

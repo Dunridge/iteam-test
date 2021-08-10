@@ -7,13 +7,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { BodyComponent } from './components/body/body.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { InputFieldComponent } from './components/body/components/input-field/input-field.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     BodyComponent,
-    FooterComponent
+    FooterComponent,
+    InputFieldComponent
   ],
   imports: [
     BrowserModule,

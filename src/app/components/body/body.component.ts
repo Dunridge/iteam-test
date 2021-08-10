@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {AbstractControl, FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import {Feedback} from "../../interfaces/feedback.interface";
+import {FormField} from "../../interfaces/form-field.interface";
 
 @Component({
   selector: 'app-body',
@@ -10,8 +11,39 @@ import {Feedback} from "../../interfaces/feedback.interface";
 export class BodyComponent implements OnInit {
   feedback!: Feedback;
   fg!: FormGroup;
+  controls: FormField[];
 
   constructor(private fb: FormBuilder) {
+    this.controls = [
+      {
+        label: 'First name',
+        control: 'firstName'
+      },
+      {
+        label: 'Last name',
+        control: 'lastName'
+      },
+      {
+        label: 'Date of birth',
+        control: 'dateOfBirth'
+      },
+      {
+        label: 'Technology',
+        control: 'technology'
+      },
+      {
+        label: 'Version',
+        control: 'version'
+      },
+      {
+        label: 'Email',
+        control: 'email'
+      },
+      {
+        label: 'Hobby',
+        control: 'hobby'
+      }
+    ];
   }
 
   ngOnInit(): void {
@@ -28,6 +60,10 @@ export class BodyComponent implements OnInit {
       email: '',
       hobby: ''
     });
+  }
+
+  convertToFormControl(absCtrl: AbstractControl | null): FormControl {
+    return absCtrl as FormControl;
   }
 
   submit(): void {
