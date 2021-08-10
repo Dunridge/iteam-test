@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {AbstractControl, FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import {Feedback} from "../../interfaces/feedback.interface";
 import {FormField} from "../../interfaces/form-field.interface";
@@ -6,7 +6,8 @@ import {FormField} from "../../interfaces/form-field.interface";
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
-  styleUrls: ['./body.component.scss']
+  styleUrls: ['./body.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BodyComponent implements OnInit {
   feedback!: Feedback;

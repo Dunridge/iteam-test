@@ -1,0 +1,17 @@
+@import "src/assets/styles/all";
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  width: 24.5rem;
+  margin-bottom: 6px;
+
+  &__label {
+    font-size: $label-font-size;
+    margin-bottom: 0.2rem;
+  }
+
+  input {
+    height: $input-height;
+  }
+}
