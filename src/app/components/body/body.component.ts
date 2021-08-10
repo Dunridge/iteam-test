@@ -22,7 +22,7 @@ export class BodyComponent implements OnInit {
     this.fg = this.fb.group({
       firstName: '',
       lastName: '',
-      dateOfBirth: new Date(),
+      dateOfBirth: new Date(), // TODO: add the date picker
       technology: '',
       version: '',
       email: '',
