@@ -10,3 +10,6 @@ $poppins: 'Poppins', serif;
   box-sizing: border-box;
   font-family: $poppins;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

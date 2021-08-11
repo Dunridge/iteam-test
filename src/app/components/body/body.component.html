@@ -1,7 +1,21 @@
 <div class="body">
   <form [formGroup]="fg">
     <div class="body__fields">
-      <app-input-field *ngFor="let control of controls" [label]="control.label" [control]="convertToFormControl(fg.get(control.control))"></app-input-field>
+<!--      Name (*)-->
+      <app-input-field [label]="controls[0].label" [control]="convertToFormControl(fg.get(controls[0].control))"></app-input-field>
+<!--      Surname (*)-->
+      <app-input-field [label]="controls[1].label" [control]="convertToFormControl(fg.get(controls[1].control))"></app-input-field>
+<!--      Birthday (*) TODO: retrieve the birthday from the object-->
+      <app-datepicker [label]="controls[2].label" [control]="convertToFormControl(fg.get(controls[2].control))"></app-datepicker>
+
+      <!--      JS technology TODO: use select for options: [angular, react, vue] -->
+      <app-input-field [label]="controls[3].label" [control]="convertToFormControl(fg.get(controls[3].control))"></app-input-field>
+<!--      Technology version TODO: use select for options: angular: ['1.1.1', '1.2.1', '1.3.3'], react: ['2.1.2', '3.2.4', '4.3.1'], vue: ['3.3.1', '5.2.1', '5.1.3'],-->
+      <app-input-field [label]="controls[4].label" [control]="convertToFormControl(fg.get(controls[4].control))"></app-input-field>
+<!--      Email TODO: add an async validator -->
+      <app-input-field [label]="controls[5].label" [control]="convertToFormControl(fg.get(controls[5].control))"></app-input-field>
+<!--      Hobbies TODO: add multiple hobbies - create a picker so that you can add multiple options - see material docs-->
+      <app-input-field [label]="controls[6].label" [control]="convertToFormControl(fg.get(controls[6].control))"></app-input-field>
     </div>
     <button (click)="submit()">Submit</button>
   </form>

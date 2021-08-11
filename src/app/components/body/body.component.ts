@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {AbstractControl, FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import {AbstractControl, FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Feedback} from "../../interfaces/feedback.interface";
 import {FormField} from "../../interfaces/form-field.interface";
 
@@ -53,13 +53,13 @@ export class BodyComponent implements OnInit {
 
   createForm(): void {
     this.fg = this.fb.group({
-      firstName: '',
-      lastName: '',
-      dateOfBirth: new Date(), // TODO: add the date picker
-      technology: '',
-      version: '',
-      email: '',
-      hobby: ''
+      firstName: ['',  Validators.required],
+      lastName: ['',  Validators.required],
+      dateOfBirth: ['',  Validators.required],
+      technology: ['',  Validators.required],
+      version: ['',  Validators.required],
+      email: ['',  Validators.required],
+      hobby: ['',  Validators.required]
     });
   }
 
