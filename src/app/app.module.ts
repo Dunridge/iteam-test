@@ -17,6 +17,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatNativeDateModule, MatRippleModule} from "@angular/material/core";
 import {MatMomentDateModule} from "@angular/material-moment-adapter";
 import {MatIconModule} from "@angular/material/icon";
+import { FrameworkSelectComponent } from './components/body/components/framework-select/framework-select.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {MatIconModule} from "@angular/material/icon";
     BodyComponent,
     FooterComponent,
     InputFieldComponent,
-    DatepickerComponent
+    DatepickerComponent,
+    FrameworkSelectComponent
   ],
   imports: [
     BrowserModule,
